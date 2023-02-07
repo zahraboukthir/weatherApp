@@ -21,7 +21,8 @@ export const Search = () => {
     }
     searchLocations(query).then(data => {
       setLocations(data);
-      console.log(data);
+
+      console.log(data.lon,'location');
     });
   }, [query]);
   console.log(show);
@@ -36,6 +37,7 @@ export const Search = () => {
         value={query}
         onChange={e => setQuery(e.target.value)}
       />
+      
       {show
         ? locations.map((location, key) => (
             <div key={key}>
