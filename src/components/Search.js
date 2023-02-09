@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/react';
+import { Button, Spinner } from '@chakra-ui/react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -48,7 +48,7 @@ export const Search = () => {
               </Link>
             </div>
           ))
-        : ''}
+        : ( <Spinner size="xl" />)}
     </div>
   );
 };
